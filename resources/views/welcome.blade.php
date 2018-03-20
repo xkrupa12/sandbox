@@ -80,6 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                    <a href="{{ url('/feedback') }}"><button>Click Me!</button></a>
                 </div>
 
                 <div class="links">

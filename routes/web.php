@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('/feedback', function () {
     return 'Welcome on feedback page!';
 });
+
+/**
+ * PHP
+ * Vue + JS
+ * CSS + preprocessors
+ */
+
+Route::get('articles/{id}', ['uses' => 'ArticlesController@show', 'as' => 'article']);

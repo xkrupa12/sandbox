@@ -6,7 +6,11 @@
 @import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
+
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
 
 .navbar-laravel {
   background-color: #fff;
@@ -16,3 +20,4 @@
 body {
   background-color: lightgrey;
 }
+

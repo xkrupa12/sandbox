@@ -1,4 +1,4 @@
-# Sandbox [![Build Status](https://travis-ci.org/xkrupa12/sandbox.svg?branch=master)](https://travis-ci.org/xkrupa12/sandbox)
+# Sandbox [![Build Status](https://travis-ci.org/xkrupa12/sandbox.svg?branch=master)](https://travis-ci.org/xkrupa12/sandbox) [![StyleCI](https://styleci.io/repos/125975041/shield?branch=master)](https://styleci.io/repos/125975041)
 
 ## PHP
 

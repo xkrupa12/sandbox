@@ -62,4 +62,3 @@ When a commit resolves issue, commit message should contain information about wh
 
 ### Licensing
 choosealicense.com
-

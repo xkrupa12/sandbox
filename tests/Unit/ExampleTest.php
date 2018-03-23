@@ -16,4 +16,12 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    /**
+     * @test
+     */
+    public function failing_test_case_just_for_demo_purposes()
+    {
+        $this->assertTrue(false);
+    }
 }

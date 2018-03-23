@@ -10,6 +10,6 @@ class Article extends Model
         'title',
         'body',
         'author',
-        'published'
+        'published',
     ];
 }

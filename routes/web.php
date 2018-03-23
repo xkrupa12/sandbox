@@ -19,7 +19,7 @@ Route::get('/feedback', function () {
     return 'Welcome on feedback page!';
 });
 
-/**
+/*
  * PHP
  * Vue + JS
  * CSS + preprocessors

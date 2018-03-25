@@ -66,6 +66,10 @@ Then, to include asset in view, use `{{ mix('path/to/asset') }}` to generate cor
         - Applying styles & Finishing
 3. Page composition - where to put what
 
+### Tailwind CSS
+Pre-compiled CSS utility classes that can be used straight away to set the desired style of page/components/etc.
+@TODO - simple cheatsheet - basic list of classes/naming conventions used   
+
 ## GIT
 
 ### Partial commits
@@ -76,3 +80,6 @@ When a commit resolves issue, commit message should contain information about wh
 
 ### Licensing
 choosealicense.com
+
+## HTTP
+### POST vs PATCH vs PUT

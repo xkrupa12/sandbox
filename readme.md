@@ -16,3 +16,9 @@
 - Partial commits
 - Issue Resolution
 - Licensing
+
+## HTTP
+### POST vs PATCH vs PUT
+
+## Architecture
+### DDD

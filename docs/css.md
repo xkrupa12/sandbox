@@ -18,4 +18,8 @@ Then, to include asset in view, use `{{ mix('path/to/asset') }}` to generate cor
         - Applying styles & Finishing
 3. Page composition - where to put what
 
+### Normalize
+Web browsers have some default styling automatically applied to HTML elements (body margin, heading's size and margins, etc.). To suppress this, we can use Normalize (https://necolas.github.io/normalize.czz) or any other normalize/reset CSS library
+
+ 
 #### [back](./../readme.md)

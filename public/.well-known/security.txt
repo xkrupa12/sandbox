@@ -1,0 +1,4 @@
+Contact: admin@sandbox.local
+Encryption: https://sandbox.local/.well-known/pgp-key.txt
+Acknowledgement: https://sandbox.local/.well-known/securitytxt.hall-of-fame.txt
+Signature: https://sandbox.local/.well-known/security.txt.sig

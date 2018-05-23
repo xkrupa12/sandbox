@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Factory create() helper
+ * Factory create() helper.
  *
  * @param string $class
- * @param array $attributes
+ * @param array  $attributes
+ *
  * @return mixed
  */
 function create(string $class, array $attributes = [])
@@ -13,10 +14,11 @@ function create(string $class, array $attributes = [])
 }
 
 /**
- * Factory make() helper
+ * Factory make() helper.
  *
  * @param string $class
- * @param array $attributes
+ * @param array  $attributes
+ *
  * @return mixed
  */
 function make(string $class, array $attributes = [])

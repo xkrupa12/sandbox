@@ -11,11 +11,13 @@ abstract class TestCase extends BaseTestCase
 
     /**
      * @param User|null $user
+     *
      * @return self
      */
     public function signIn(User $user = null): self
     {
         $this->actingAs($user ?? create(User::class));
+
         return $this;
     }
 }

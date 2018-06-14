@@ -76,3 +76,7 @@ In previous versions of Laravel (5.4 and older), there was a problem with except
 - utilize/leverage ES6 methods (`map()`, `slice()`, etc.)
 - make components as atomic as possible (similarly to OOP)
 - when a library is used all over the place, register it globally - in bootstraping script, call `window.identifier = require('library)`, ie. Moment, Axios
+
+### Forms
+- when listening for event on the whole form (ie. keydown on every input), we can use `$event` to reach the component that triggered the event - ie. name attribute of component would be - `$event.target.name`
+- server side validation can be easily handled on front - laravel generates 422 error automatically when the validation fails and returns all the necessary data (field and corresponding error message) - `.catch(error => error.response.data)`

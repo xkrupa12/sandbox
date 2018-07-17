@@ -18,8 +18,7 @@ trait SwiftMailTracking
     public function setUpMailTracking(): void
     {
         Mail::getSwiftMailer()->registerPlugin(
-            new class($this) implements Swift_Events_EventListener
-            {
+            new class($this) implements Swift_Events_EventListener {
                 /**
                  * @var TestCase
                  */
@@ -54,6 +53,7 @@ trait SwiftMailTracking
 
     /**
      * @param string $sender
+     *
      * @return TestCase
      */
     protected function seeSenderIs(string $sender): TestCase
@@ -65,6 +65,7 @@ trait SwiftMailTracking
         }, []);
 
         $this->assertTrue(\in_array($sender, $senders, true));
+
         return $this;
     }
 
@@ -74,11 +75,13 @@ trait SwiftMailTracking
     protected function seeEmailWasSent(): TestCase
     {
         $this->assertNotEmpty($this->emails, 'No emails have been sent');
+
         return $this;
     }
 
     /**
      * @param int $count
+     *
      * @return TestCase
      */
     protected function seeEmailsSent(int $count): TestCase

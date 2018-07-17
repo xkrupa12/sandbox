@@ -24,3 +24,52 @@ Since this mail interception is wrapped in trait and we need to set up this stuf
 
 Caveats: 
 - `addEmail()` method is not part of `TestCase` class but in the trait itself - phpstorm will report a warning in there 
+
+### Exception Handling
+Laravel handles some exceptions himself, ie. if route is missing it throws 404, etc. If it is not desirable in testing, you can use helpers like `$this->withExceptionHandling()` or `$this->handleValidationExceptions()`, etc.
+@TODO - learn more!
+
+### Vue Testing
+- vue-test-utils - vue testing framework
+- mocha + mocha-webpack - testing library
+- expect - assertion library 
+- jsdom, jsdom-global
+
+### Vue Testing using Mocha + Webpack + vue-test-utils
+- wrapper - object wrapping tested object on which we're trying to do some stuff
+
+```js
+let configuration object = {
+    propsData: { << object properties >> },
+    // ...
+}
+
+let wrapper = mount(TestedObject [, configuration object ]);
+wrapper.setProps({ propsObject }); // alternative props setting
+
+wrapper.vm.$nextTick(() => {
+    // assertions depending on vue processing change after clock ticks (refresh in time)
+});
+// this can be bypassed by using async callback
+it ('tests something definitely useful', async () => {
+    // do something
+    await wrapper.vm.$nextTick();
+    // assertions depending on refresh of a object
+})
+
+wrapper.emitted().<<event identifier>> // test that event was emitted
+wrapper.find(<<selector>>) // selects DOM object by given selector
+wrapper.html()  // gets HTML of wrapped object -> might be concatenated with find
+wrapper.element // HTML of whole wrapper?
+wrapper.contains(<<selector>>) // returns true/false
+wrapper.find('.some-element').hasStyle('display', 'none') // checks style, returns bool
+```
+
+- expect - library for assertions
+
+expect(wrapper.<<do something>>).<<assertion>>
+expect(wrapper.contains('.some-object')).toBe(true);
+
+- moxios - library for testing axios calls -> requires setup in 
+beforeEach() and afterEach()
+- sinon js - library for testing JS - underlying library agnostic - for various use-cases, whether testing AJAX calls or clock or something else

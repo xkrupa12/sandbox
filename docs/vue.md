@@ -2,7 +2,9 @@
 
 ## Vuex
 `yarn vuex`
-- instantiated via `Vuex.Store({ << config object >>})`
+`import Vuex; import Vue; Vue.use(Vuex)`
+
+- instantiated via ` export default new Vuex.Store({ << config object >>})`
 Config object contains state, getters, actions, mutations, 
 
 ### State

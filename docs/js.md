@@ -66,4 +66,62 @@ export default Status;
     - requires setting in `package.json`: `"ava": { "require": ["babel-register"] }`
 
 
+# ES6
+
+## Blocks
+If you want to restrict access to variable, you can define block using `{}` without need of stuffing it into function. Defining variable in such a block will enable access to variable only inside of that block, no upper levels.
+
+## Strings
+### Interpolation
+Using template literals "\`" (backtick) -> `console.log(\`(${x}, ${y})\`)`
+
+### Multi-line strings
+Template literals are usable to also define multi-line strings 
+
+### New methods
+- `str.startsWith('x')` replaces `str.indexOf('x') === 0`
+- `str.endsWith('x')`
+- `str.includes('x')`
+- `'str'.repeat(3)` => 'strstrstr'
+
+## Arrow functions
+Simplified functions definition, handy especially for short functions (ie. anonymous), like: `arr.map(x => x * x)`
+
+## Loops
+### for vs forEach
+`forEach` is ES5 construct, whereas `for-of` is ES6 and allows breaking from loop. `for (const [index, elem] of arr)`  
+
+## Named parameters
+ES6 allows easier default arg values definition similar to PHP: `function myFunc(arg = 'defaultValue')`
+If argument is supposed to be object, we can define it's default property values as well: `function myFunc({ prop1: 'default' })`
+If argument is object, but is optional entirely, we can define it as `function muFunc({ prop1 = 'default' } = {})` 
+
+## Rest arguments
+ES6 allows arbitrary number of arguments using `...` notation: `function myFunc(...args) {}` or `function myFunc(firstArg, ...theRest) {}`
+
+## Spread operator (...)
+Enables turning array into parameters, ie: `Math.max(...[1, 2, 3, 4])`
+This can be used to push array items into another array: `arr1.push(...arr2)`
+Or concatenating arrays into new one: `let arr3 = [...arr1, ...arr2]`
+
+## Method definitions
+Introduced shortened method definition of object: `let obj = { method() { /* do something */ }, }` instead of `method: function () { /* do something */ } ` 
+
+## Classes
+No need to use class prototypes to extend them anymore, class definition contains all the methods it implements right away.
+It's also possible to extend one class from another: `class Employee extends Person {}`. To access parent methods use `super` keyword (`super.parentMethod()`)
+It's also possible to extend `Error` class and implement sublclasses of `Error`
+
+## Map
+New built-in data structure
+
+## Array methods
+- `arr.findIndex(closure)` 
+- `arr = Array.from(arguments)` - create array from array-like objects
+- `arr = new Array(2).fill(undefined)` - create array of arbitrary length (2 in this example) filled with arbitrary value (`undefined`s here)
+
+## ES6 modules
+If you want to export some stuff from the script, simply put `export` before it, ie. `export const myConst = 5` or `export function myFunction () {}`. These are *named exports* and can be imported as `import { myConst, myFunction } from './file'`. Alternatively, we can import everything with `import * as file from './file'` and access it as `file.myConst`
+In case we're exporting single value from module, we can use `export default` (! exported values are not named, ie. `export default function () {}` !) prefix and import it as `import WhateverNameIWant from './file'`
+ 
 #### [back](./../readme.md)

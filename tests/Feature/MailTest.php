@@ -28,4 +28,3 @@ class MailTest extends TestCase
         $this->seeEmailsSent(1);
     }
 }
-
